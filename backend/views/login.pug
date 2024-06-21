@@ -1,0 +1,14 @@
+extends ./base-layout.pug
+
+block content 
+    h1 login
+    form(method="POST")
+        label(for="usr") username 
+        input(type="text" id="usr" name="usr")
+        br
+        label(for="pw") password 
+        input(type="password" id="pw" name="pw")
+        br
+        input(type="submit" value="Invia")
+        br
+        a(href="/signup") sign up

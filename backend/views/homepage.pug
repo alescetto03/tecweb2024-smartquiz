@@ -1,0 +1,30 @@
+extends ./base-layout.pug
+
+block content 
+  h1 Ciao
+  h2 modifica quiz 
+  form(action="quizzes/2?_method=PUT" method="POST")
+    label(for="title") titolo 
+    input(id="title" name="title")
+    br
+    label(for="description") descrizione
+    input(id="description" name="desc")
+    br
+    input(type="submit" value="Invia")
+  br
+  br 
+  h2 elimina quiz 1
+  form(action="quizzes/1?_method=DELETE" method="POST")
+    input(type="submit" value="elimina")
+  h2 aggiungi domanda 
+  form(action="quizzes/2/questions?_method=POST" method="POST")
+    label(for="question") domanda id
+    input(id="question" name="qstno")
+    br
+    label(for="question") domanda
+    input(id="question" name="qstn")
+    br
+    label(for="correctAnswer") descrizione
+    input(id="correctAnswer" name="ca")
+    br
+    input(type="submit" value="invia")
